@@ -1,10 +1,10 @@
+import io
+import sys
+from io import StringIO
 import unittest
 from unittest.mock import patch, Mock
-import io
-from io import StringIO
-import sys
 from game import Game
-from itertools import cycle
+
 
 
 class TestGame(unittest.TestCase):
@@ -141,6 +141,11 @@ class TestGame(unittest.TestCase):
                 self.assertIn("try 5", output)
 
 
+    @patch('builtins.input', side_effect=['y', 'n', 'invalid', 'y', 'n', 'invalid', 'y'])
+    def test_play_again(self, mock_input):
+        # Test when the user inputs 'y' to play again
+        with self.assertRaises(SystemExit):
+            self.game.play_again()
 
 
 
