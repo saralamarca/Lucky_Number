@@ -1,8 +1,8 @@
 # ★ Lucky Number ★
 
 
-#### Welcome to the Lucky Number Game!
-### This game challenges players to guess a "lucky number" from a generated list.
+### Welcome to the Lucky Number Game!
+#### This game challenges players to guess a "lucky number" from a generated list.
 #### The game continues until the player either guesses correctly or only two numbers remain in the list.
 
 
